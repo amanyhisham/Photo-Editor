@@ -1,0 +1,176 @@
+*{
+    padding:0;
+    margin:0;
+    font-size: sans-serif;
+}
+body{
+    background-color:#333;
+    display: flex;
+    justify-content: center;
+}
+.container{
+   background-color: #222;
+   padding:30px;
+   border-radius: 10px;
+   margin: auto;
+   margin-top: 50px;
+    display: grid;
+    width:80vw;
+    grid-template-columns:5fr 3fr;
+    gap:10px;
+
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:50px;
+  }
+.img img,canvas{
+    max-width: 40vw; 
+    max-height: 80vh;
+    border-radius: 10px;
+  
+ }
+ canvas {
+    display: block;
+}
+.upload input{
+    display: none;
+}
+.upload label{
+    color: white;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border:2px dashed #fff;
+ 
+}
+ 
+.upload label {
+    margin-top: 0;
+}
+
+.filter ul,
+.filter ul li {
+    display: flex;
+    flex-direction: column;
+   gap: 20px;  
+    color: white;
+    direction: rtl;
+}
+ 
+.filter ul li:last-child{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filter ul li a,span{
+    padding: 10px 25px;
+  
+    cursor: pointer;
+    background-color: #060;
+    color: white;
+}   
+/* Media Queries للشاشات المتوسطة */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90vw;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .img img, canvas {
+        max-width: 70vw;
+        max-height: 60vh;
+    }
+}
+
+/* Media Queries للشاشات الصغيرة (التابلت) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95vw;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .img img, canvas {
+        max-width: 85vw;
+        max-height: 50vh;
+    }
+    
+    .filter ul li {
+        gap: 15px;
+    }
+    
+    .filter ul li a, span {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Media Queries للموبايل */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95vw;
+        padding: 15px;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    
+    .img img, canvas {
+        max-width: 90vw;
+        max-height: 40vh;
+    }
+    
+    .upload label {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+    
+    .filter ul {
+        gap: 15px;
+    }
+    
+    .filter ul li {
+        gap: 10px;
+    }
+    
+    .filter ul li label {
+        font-size: 14px;
+    }
+    
+    .filter ul li:last-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .filter ul li a, span {
+        padding: 10px 15px;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+    
+   
+}
+
+/* للشاشات الصغيرة جداً */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .img img, canvas {
+        max-width: 95vw;
+        max-height: 35vh;
+    }
+    
+    .filter ul li label,
+    .filter ul li a,
+    span {
+        font-size: 12px;
+    }
+}
