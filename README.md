@@ -56,6 +56,7 @@ Photo-Editor/
 2. Open `index.html` in your browser.
 3. Click **Upload** to choose an image.
 4. Use the sliders to edit your photo in real time!
+5. Can Download on your device
 
 ---
 
